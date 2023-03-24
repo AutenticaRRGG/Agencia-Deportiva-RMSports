@@ -1,0 +1,22 @@
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5 fixed-top" th:fragment="menu-principal">
+            <a th:href="@{/}" class="navbar-brand ml-lg-3">
+                <h1 class="m-0 text-primary"><span class="text-dark"> Agencia</span> Deportiva</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav m-auto py-0">
+                    <a th:href="@{/}" class="nav-item nav-link active">Home</a>
+                    <a th:href="@{/deportistas/indexPaginado}" class="nav-item nav-link">Deportistas</a>
+                    <a th:href="@{/equipos/indexPaginado}" class="nav-item nav-link">Equipos</a>
+                     <a th:href="@{/acerca}" class="nav-item nav-link">Acerca</a>
+                     
+            </div>
+            <a class="btn btn-primary" href="#">Ingresar</a>&nbsp;
+          <a class="btn btn-primary" href="#">Registrarse</a>&nbsp;
+          <a class="btn btn-primary" th:href="@{/logout}">Salir</a> 
+        </nav>
+   
+    <!-- Navbar End -->
+        
