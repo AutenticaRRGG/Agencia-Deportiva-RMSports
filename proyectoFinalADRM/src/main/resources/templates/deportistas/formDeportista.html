@@ -28,9 +28,9 @@
       <div class="container"> 
 
         <div class="card">
-          <h4 class="card-header"><strong>Datos de la categoría</strong></h4>              
+          <h4 class="card-header"><strong>Datos del Deportista</strong></h4>              
           <div class="card-body">
-            <form method="post" th:action="@{/deportistas/guardar}" th:object="${deportista}">              
+            <form method="post" enctype="multipart/form-data" th:action="@{/deportistas/guardar}" th:object="${deportista}">              
               <div class="row">
                 <div class="col-md-6"> 
                   <div class="form-group">
@@ -40,15 +40,22 @@
                   </div>
                 </div>                
               </div> 
-              <div class="row">
-                <div class="col-md-6"> 
+             
+              <div class="col-md-3"> 
                   <div class="form-group">
-                    <label for="categoria">Deporte</label>
-                    <input type="hidden" th:field="*{id}"> 
-                    <textarea class="form-control" th:field="*{categoria}" name="categoria" id="categoria"></textarea>
-                  </div> 
-                </div>                
-              </div>
+                    <label for="categoria">Categoria</label>
+                    <select class="form-control" name="categoria" id="categoria">
+					  <option value="Futbol">Futbol</option>
+                      <option value="Natacion">Natacion</option>	
+                       <option value="Futbol Americano">Futbol Americano</option>
+                      <option value="Beisbol">Beisbol</option>
+                       <option value="Basquebol">Basquetbol</option>
+                       <option value="Box">Box</option>
+                       <option value="Voleibol">Voleibol</option>
+                    </select>
+                  </div>
+                </div>
+                
               <div class="row">
                 <div class="col-md-6"> 
                   <div class="form-group">
@@ -58,6 +65,7 @@
                   </div>
                 </div>                
               </div>  
+              
                <div class="col-md-3"> 
                   <div class="form-group">
                     <label for="fechaNacimiento">Fecha de nacimiento</label>
@@ -97,6 +105,25 @@
                   </div>
                 </div>                
               </div> 
+               <div class="col-md-9"> 
+                  <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" th:field="*{descripcion}" placeholder="Breve descripcion del producto" required="required">
+                  </div> 
+                </div> 
+                
+                <div class="col-md-3"> 
+                  <div class="form-group">
+                    <label for="archivoImagen">Imagen</label>
+                    <input type="file" class="form-control-file" name="archivoImagen" id="archivoImagen">
+                  </div>
+                </div>
+              
+              <hr>
+               <div class="col-md-3">
+                  <label for="imagen">Imagen/Producto</label>
+                  <img class="rounded mx-auto d-block" th:src="@{/images/{img}(img=${deportista.imagen})}" alt="Generic placeholder image" width="60" height="60">            
+                </div>  
               <hr>
               <button type="submit" title="Guardar el registro." class="btn btn-primary">Guardar</button>  
             </form>

@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Agencia deprtiva | Creación de Ofertas de Trabajo</title>
+    <title>EmpleosApp | Creación de Ofertas de Trabajo</title>
     <!-- Bootstrap core CSS -->
     <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -28,10 +28,10 @@
       <div class="container"> 
 
         <div class="card">
-          <h4 class="card-header"><strong>Datos del estadio </strong></h4>              
+          <h4 class="card-header"><strong>Datos de los equipos </strong></h4>              
           <div class="card-body">
 			 
-            <form method="post" enctype="multipart/form-data" th:action="@{/equipos/guardar}" th:object="${equipo}"> 
+            <form method="post" enctype="multipart/form-data" th:action="@{/estadios/guardar}" th:object="${estadio}"> 
 				
 				 <div th:if="${#fields.hasErrors('*')}" class='alert alert-danger'
 				 role='alert'>Por favor corrija los siguientes errores: 
@@ -45,7 +45,7 @@
                   <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="hidden" th:field="*{id}">
-                    <input type="text" class="form-control" id="nombre" name="nombre" th:field="*{nombre}" placeholder="Nombre del eequipo" required="required">
+                    <input type="text" class="form-control" id="nombre" name="nombre" th:field="*{nombre}" placeholder="Nombre del estadio" required="required">
                   </div>
                 </div>
                 <div class="col-md-9"> 
@@ -60,46 +60,30 @@
                   <div class="form-group">
                     <label for="categoria">Categoría</label>
                     <select class="form-control" th:field="*{categoria.id}" name="categoria" id="categoria">
-                      <option value="1" th:each="categoria:${deportistas}"
-                      th:value="${categoria.id}"
-                      th:text="${categoria.categoria}"></option>
+                      <option  th:each="deportista:${deportistas} "
+                      th:value="${deportista.id}"
+                      th:text="${deportista.categoria}"></option>
                   
                     </select>
                   </div>
                 </div>
-                </div>
-                <div class="col-md-3"> 
+                  <div class="col-md-9"> 
                   <div class="form-group">
-                    <label for="estatus">Estatus</label>
-                    <select class="form-control" name="estatus" id="estatus">
-					  <option value="Creada">Creada</option>
-                      <option value="Aprobada">Aprobada</option>
-                      <option value="Eliminada">Eliminada</option>	
-                    </select>
-                  </div>
-                </div>
-             <div class="row">
-                <div class="col-md-6"> 
+                    <label for="estado">Estado</label>
+                    <input type="text" class="form-control" id="estado" name="estado" th:field="*{estado}" placeholder="Breve descripcion del equipo" required="required">
+                  </div> 
+                </div>    
+              </div>  
+                 <div class="col-md-9"> 
                   <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="hidden" th:field="*{id}"> 
-                    <input type="text" class="form-control" th:field="*{email}" id="email" name="email" placeholder="Escriba el email del deportista" required="required">
-                  </div>
-                </div>                
-              </div> 
-               <div class="col-md-3"> 
-                  <div class="form-group">
-                    <label for="archivoImagen">Imagen</label>
-                    <input type="file" class="form-control-file" name="archivoImagen" id="archivoImagen">
-                  </div>
-                </div>
-              </div> 
-              <hr>
-               <div class="col-md-3">
-                  <label for="imagen">Imagen/Logo</label>
-                  <img class="rounded mx-auto d-block" th:src="@{/images/{img}(img=${equipo.imagen})}" alt="Generic placeholder image" width="200" height="200">            
-                </div>
-              <hr>
+                    <label for="capacidad">Capacidas</label>
+                    <input type="text" class="form-control" id="capacidad" name="capacidad" th:field="*{capacidad}" placeholder="Breve descripcion del equipo" required="required">
+                  </div> 
+                </div>    
+              </div>  
+
+<hr>
+          
               <button type="submit" class="btn btn-primary">Guardar</button>  
             </form>
           </div>

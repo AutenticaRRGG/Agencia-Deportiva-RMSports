@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Agencia Deportiva | Listado de Equipos</title>
+    <title>EmpleosApp | Listado de Ofertas de Trabajo</title>
     <!-- Bootstrap core CSS -->
       <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -55,7 +55,7 @@
                   <td th:text="${equipo.estatus}"></td>
                   <td th:text="${equipo.email}"></td>
                    <td>
-				 <img class="rounded mx-auto d-block" th:src="@{/images/{img}(img=${equipo.imagen})}" alt="Generic placeholder image" width="200" height="200">            
+				 <img class="rounded mx-auto d-block" th:src="@{/images/{img}(img=${equipo.imagen})}" alt="Generic placeholder image" width="50" height="50">            
  </td>
                   <td>
                     <a th:href="@{/equipos/buscar(id=${equipo.id})}" class="btn btn-success btn-sm" role="button" title="Editar el registro."><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>

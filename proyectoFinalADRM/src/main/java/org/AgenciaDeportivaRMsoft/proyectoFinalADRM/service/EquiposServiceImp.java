@@ -79,4 +79,16 @@ public class EquiposServiceImp implements IntServiceEquipos {
 		return null;
 	}
 
+	@Override
+	public List<Equipo> buscarDestacadas() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+//	@Override
+//	public List<Equipo> buscarTodasCategoria(int idDeportista) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+
 }
