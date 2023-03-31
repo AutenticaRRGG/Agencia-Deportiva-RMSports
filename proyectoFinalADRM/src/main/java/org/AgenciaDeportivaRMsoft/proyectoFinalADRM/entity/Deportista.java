@@ -23,6 +23,8 @@ public class Deportista {
 	private double estatura;
 	private String telefono;
 	private String email;
+	private String descripcion;
+	private String imagen="logoRMsoft.png";
 	public Integer getId() {
 		return id;
 	}
@@ -77,11 +79,22 @@ public class Deportista {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String getDescripcion() {
+		return descripcion;
+	}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+	public String getImagen() {
+		return imagen;
+	}
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
 	@Override
 	public String toString() {
 		return "Deportista [id=" + id + ", nombre=" + nombre + ", categoria=" + categoria + ", posicion=" + posicion
 				+ ", fechaNacimiento=" + fechaNacimiento + ", peso=" + peso + ", estatura=" + estatura + ", telefono="
-				+ telefono + ", email=" + email + "]";
+				+ telefono + ", email=" + email + ", descripcion=" + descripcion + ", imagen=" + imagen + "]";
 	}
-	
 }
