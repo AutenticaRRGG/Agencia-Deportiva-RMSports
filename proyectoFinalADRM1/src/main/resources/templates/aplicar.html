@@ -35,11 +35,21 @@
 				<div class="card-body">
 					<div class="alert alert-success" role="alert" th:if="${mensaje!=null}" th:text="${mensaje}"></div>
 					<form th:action="@{/cargar}" method="post" enctype="multipart/form-data">
-						<input type="file" class="form-control" name="archivos">
+						<h6>Carga tu cv</h6>
+						<input type="file" class="form-control" name="archivos" required="required">
 						<br>
-						<input type="submit" value="Cargar" class="btn btn-primary">
-					</form>
-
+						<h6>Carga tu certificado médico</h6>
+						<input type="file" class="form-control" name="archivos" required="required">
+						
+						<br>
+						
+						
+					<h6>COMENTARIOS</h6>
+					<input type="text" class="form-control" id="descripcion" name="Comentarios" required="required">
+					<br>
+					<input type="submit" value="Cargar" class="btn btn-primary " required="required">
+					
+</form>
 				</div>
 
 	</main>
