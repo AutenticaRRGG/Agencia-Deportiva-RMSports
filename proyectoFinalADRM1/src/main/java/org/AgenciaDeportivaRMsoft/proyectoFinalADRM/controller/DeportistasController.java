@@ -2,7 +2,7 @@ package org.AgenciaDeportivaRMsoft.proyectoFinalADRM.controller;
 
 import java.beans.PropertyEditorSupport;
 import java.io.IOException;
-import java.sql.Date;
+import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -131,7 +131,7 @@ public class DeportistasController {
 	public void exportarListadoDeDeportistasEnPDF(HttpServletResponse response) throws DocumentException, IOException {
 		response.setContentType("application/pdf");
 		DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
-        String fechaActual = dateFormatter.format(new Date(0));
+        String fechaActual = dateFormatter.format(new Date());
          
         String cabecera = "Content-Disposition";
         String valor = "attachment; filename=Deportistas" + fechaActual + ".pdf";
@@ -148,7 +148,7 @@ public class DeportistasController {
 	public void exportarListadoDeDeportistasEnExcel(HttpServletResponse response) throws DocumentException, IOException {
 		response.setContentType("application/octet-stream");
 		DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
-        String fechaActual = dateFormatter.format(new Date(2023));
+        String fechaActual = dateFormatter.format(new Date());
          
         String cabecera = "Content-Disposition";
         String valor = "attachment; filename=Deportistas" + fechaActual + ".xlsx";

@@ -40,36 +40,23 @@ public class DeportistaExporterPDF {
 		tabla.addCell(celda);
 		celda.setPhrase(new Phrase("Categoria", fuente));
 		tabla.addCell(celda);
-		celda.setPhrase(new Phrase("Posicion", fuente));
-		tabla.addCell(celda);
 		celda.setPhrase(new Phrase("fechaNacimiento", fuente));
-		tabla.addCell(celda);
-		celda.setPhrase(new Phrase("peso", fuente));
 		tabla.addCell(celda);
 		celda.setPhrase(new Phrase("estatura", fuente));
 		tabla.addCell(celda);
-		celda.setPhrase(new Phrase("telefono", fuente));
-		tabla.addCell(celda);
 		celda.setPhrase(new Phrase("email", fuente));
 		tabla.addCell(celda);
-		celda.setPhrase(new Phrase("descripcion", fuente));
-		tabla.addCell(celda);
-		celda.setPhrase(new Phrase("Imagen", fuente));
-		tabla.addCell(celda);
+
 	}
 
 	private void escribirDatosDeLaTabla(PdfPTable tabla) {
 		for (Deportista deportista : listaDeportistas) {
 			tabla.addCell(String.valueOf(deportista.getId()));
 			tabla.addCell(deportista.getNombre());
-			tabla.addCell(deportista.getCategoria());
-			tabla.addCell(String.valueOf(deportista.getPosicion()));
 			tabla.addCell(String.valueOf(deportista.getFechaNacimiento()));
-			tabla.addCell(String.valueOf(deportista.getPeso()));
 			tabla.addCell(String.valueOf(deportista.getEstatura()));
-			tabla.addCell(deportista.getTelefono());
 			tabla.addCell(deportista.getEmail());
-			tabla.addCell(deportista.getImagen());
+
 		}
 	}
 
