@@ -38,8 +38,6 @@ public class DeportistaExporterPDF {
 		tabla.addCell(celda);
 		celda.setPhrase(new Phrase("Nombre", fuente));
 		tabla.addCell(celda);
-		celda.setPhrase(new Phrase("Categoria", fuente));
-		tabla.addCell(celda);
 		celda.setPhrase(new Phrase("fechaNacimiento", fuente));
 		tabla.addCell(celda);
 		celda.setPhrase(new Phrase("estatura", fuente));
