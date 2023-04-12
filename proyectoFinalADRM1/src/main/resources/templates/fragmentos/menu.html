@@ -10,7 +10,7 @@
 		<div class="navbar-nav m-auto py-0">
 			<a  th:href="@{/}" class="nav-item nav-link active">Home</a>
 			<a th:href="@{/acerca}" class="nav-item nav-link">Acerca</a>
-			<a th:href="@{/homeEquipos}" class="nav-item nav-link">Equipos</a>
+			<a th:href="@{/homeEquipos}" class="nav-item nav-link">Vacantes</a>
 			<li class="nav-item" sec:authorize="hasAnyAuthority('Administrador','Supervisor')">
 				<a th:href="@{/deportistas/indexPaginado}" class="nav-item nav-link">Deportistas</a>
 			</li>
