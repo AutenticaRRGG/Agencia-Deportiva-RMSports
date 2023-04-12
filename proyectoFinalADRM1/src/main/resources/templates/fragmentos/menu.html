@@ -19,12 +19,12 @@
 				<a th:href="@{/equipos/indexPaginado}" class="nav-item nav-link">Equipos</a>
 			</li>
 
-			<!--<li class="nav-item" sec:authorize="hasAnyAuthority('Administrador','Supervisor')">
-				<a th:href="@{/estadios/indexPaginado}" class="nav-item nav-link">Estadios</a>
-			</li> -->
 			<li class="nav-item" sec:authorize="hasAnyAuthority('Administrador','Supervisor')">
-				<a th:href="@{/productos/indexPaginado}" class="nav-item nav-link">Productos</a>
+				<a th:href="@{/estadios/indexPaginado}" class="nav-item nav-link">Estadios</a>
 			</li>
+			<!--<li class="nav-item" sec:authorize="hasAnyAuthority('Administrador','Supervisor')">
+				<a th:href="@{/productos/indexPaginado}" class="nav-item nav-link">Productos</a>
+			</li> -->
 
 			<li class="nav-item" sec:authorize="hasAnyAuthority('Administrador')">
 				<a class="nav-link" th:href="@{/usuarios/index}">Usuarios</a>
