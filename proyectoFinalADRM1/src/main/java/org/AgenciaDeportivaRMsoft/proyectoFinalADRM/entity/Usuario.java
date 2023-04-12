@@ -26,7 +26,7 @@ public class Usuario {
 	private String password;
 	private Integer estatus;
 	private LocalDate fechaRegistro;
-	private String imagen="logoRMsoft.png";
+	private String imagen="sinImagen.png";
 	
 	@ManyToMany (fetch=FetchType.EAGER)
 	@JoinTable (name="UsuarioPerfil",
