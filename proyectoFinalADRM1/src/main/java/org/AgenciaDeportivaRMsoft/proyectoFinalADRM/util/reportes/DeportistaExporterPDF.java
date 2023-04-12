@@ -34,7 +34,7 @@ public class DeportistaExporterPDF {
 		Font fuente = FontFactory.getFont(FontFactory.HELVETICA);
 		fuente.setColor(Color.white);
 
-		celda.setPhrase(new Phrase("ID", fuente));
+		celda.setPhrase(new Phrase("Id", fuente));
 		tabla.addCell(celda);
 		celda.setPhrase(new Phrase("Nombre", fuente));
 		tabla.addCell(celda);
@@ -72,9 +72,9 @@ public class DeportistaExporterPDF {
 
 		documento.add(p);
 
-		PdfPTable tabla = new PdfPTable(6);
+		PdfPTable tabla = new PdfPTable(5);
 		tabla.setWidthPercentage(100f);
-		tabla.setWidths(new float[] { 1.5f, 3.5f, 3.0f, 3.0f, 1.5f, 3.0f });
+		tabla.setWidths(new float[] { 1.5f, 3.5f, 3.0f, 3.0f, 1.5f});
 		tabla.setSpacingBefore(10);
 		tabla.setWidthPercentage(110);
 
