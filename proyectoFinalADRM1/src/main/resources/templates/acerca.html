@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>AgenciaDeportiva | Aplicación para publicar Ofertas deportivas de Trabajo.</title>
+    <!-- Bootstrap core CSS -->
+      <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link th:href="@{/bootstrap/css/jumbotron.css}" rel="stylesheet">
+    <link th:href="@{/bootstrap/css/sticky-footer-navbar.css}" rel="stylesheet">
+     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="fonts/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header th:insert="fragmentos/menu.html::menu-principal"></header>
+    <main role="main">     
+      
+        <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 pb-5 pb-lg-0">
+                    <img class="img-fluid w-100" src="images/logoRMsoft.png" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">Sobre nosotros</h6>
+                    <h1 class="mb-4">Tu mejor opción!</h1>
+                    <p class="pl-4 border-left border-primary">Somos una agencia deportiva en donde siempre encontrarás vacantes diponibles para que encunetres a tu candidato indeal para tu equipo de cualquier deporte. Si eres deportista podras encontrar al equipo de juego de tus sueños!!</p>
+                    <div class="row pt-3">
+                        <div class="col-6">
+                            <div class="bg-light text-center p-4">
+                                <h3 class="display-4 text-primary" >99</h3>
+                                <h6 class="text-uppercase">Equipos disponibles</h6>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bg-light text-center p-4">
+                                <h3 class="display-4 text-primary" >999</h3>
+                                <h6 class="text-uppercase">Clientes</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Service End -->
+
+    </main>
+
+     <footer class="footer" th:insert="fragmentos/pie.html::pie"></footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="@{bootstrap/js/bootstrap.min.js}"></script>     
+  </body>
+</html>
